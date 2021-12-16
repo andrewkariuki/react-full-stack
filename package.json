@@ -1,8 +1,14 @@
 {
   "name": "react-full-stack",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "prepare": "yarn husky install"
+    "prepare": "lerna exec husky install",
+    "clean": "lerna exec del-cli packages/**/build",
+    "dev:backend": "lerna run develop --scope=@react-full-stack/backend",
+    "build:backend": "lerna run build --scope=@react-full-stack/backend"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
@@ -11,6 +17,7 @@
     "chalk": "^5.0.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "del-cli": "^4.0.1",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
