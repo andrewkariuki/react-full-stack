@@ -39,4 +39,8 @@ export class User extends BaseEntity {
   async hashPasswordBeforeInsert() {
     this.password = await argon2.hash(this.password);
   }
+
+  validatePassword(password: string) {
+    return argon2.verify(password, this.password);
+  }
 }
