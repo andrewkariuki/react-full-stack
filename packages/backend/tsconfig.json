@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "./build",
     "sourceMap": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "rootDir": "."
   },
   "exclude": ["node_modules"],
   "include": ["./src/**/*.tsx", "./src/**/*.ts"]

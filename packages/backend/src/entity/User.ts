@@ -1,17 +1,16 @@
+import * as argon2 from "argon2";
 import {
-  Entity,
-  PrimaryGeneratedColumn,
+  BaseEntity,
+  BeforeInsert,
   Column,
   CreateDateColumn,
-  BaseEntity,
-  UpdateDateColumn,
   DeleteDateColumn,
-  VersionColumn,
-  BeforeInsert,
+  Entity,
   OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+  VersionColumn,
 } from "typeorm";
-
-import * as argon2 from "argon2";
 import { Todo } from "./Todo";
 
 @Entity("users")

@@ -7,14 +7,14 @@ development: # development connection
   database: "todos"
   synchronize: true
   logging: false
-  entities: ["packages/backend/src/entity/**/*.ts"]
-  migrations: ["packages/backend/src/migration/**/*.ts"]
-  subscribers: ["packages/backend/src/subscriber/**/*.ts"]
+  entities: ["src/entity/**/*.ts"]
+  migrations: ["src/migration/**/*.ts"]
+  subscribers: ["src/subscriber/**/*.ts"]
   cli:
     {
-      "entitiesDir": "packages/backend/src/entity",
-      "migrationsDir": "packages/backend/src/migration",
-      "subscribersDir": "packages/backend/src/subscriber",
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber",
     }
 
 test: # test environment connection
@@ -26,12 +26,12 @@ test: # test environment connection
   database: "todos_test"
   synchronize: true
   logging: false
-  entities: ["packages/backend/src/entity/**/*.ts"]
-  migrations: ["packages/backend/src/migration/**/*.ts"]
-  subscribers: ["packages/backend/src/subscriber/**/*.ts"]
+  entities: ["src/entity/**/*.ts"]
+  migrations: ["src/migration/**/*.ts"]
+  subscribers: ["src/subscriber/**/*.ts"]
   cli:
     {
-      "entitiesDir": "packages/backend/src/entity",
-      "migrationsDir": "packages/backend/src/migration",
-      "subscribersDir": "packages/backend/src/subscriber",
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber",
     }
