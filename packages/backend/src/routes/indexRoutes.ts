@@ -8,6 +8,7 @@ export class IndexRoutes extends RoutesConfig {
 
   configureRoutes() {
     this.app.route("/").get((req: Request, res: Response) => {
+      console.log(req);
       res.json({ re: 1232, req: 12 });
     });
     return this.app;

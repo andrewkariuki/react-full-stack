@@ -1,9 +1,13 @@
+import "reflect-metadata";
 import debug from "debug";
-import express from "express";
+import * as express from "express";
 import * as http from "http";
 import { config } from "./config";
 import { IndexRoutes } from "./routes";
 import { RoutesConfig } from "./shared";
+import { connectDB } from "./services";
+
+connectDB().then(() => console.log("Database connection established."));
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);

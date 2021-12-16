@@ -1,0 +1,37 @@
+development: # development connection
+  type: "postgres"
+  host: "localhost"
+  port: 5432
+  username: "postgres"
+  password: "1234"
+  database: "todos"
+  synchronize: true
+  logging: false
+  entities: ["src/entity/**/*.ts"]
+  migrations: ["src/migration/**/*.ts"]
+  subscribers: ["src/subscriber/**/*.ts"]
+  cli:
+    {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber",
+    }
+
+test: # test environment connection
+  type: "postgres"
+  host: "localhost"
+  port: 5432
+  username: "postgres"
+  password: "1234"
+  database: "todos_test"
+  synchronize: true
+  logging: false
+  entities: ["src/entity/**/*.ts"]
+  migrations: ["src/migration/**/*.ts"]
+  subscribers: ["src/subscriber/**/*.ts"]
+  cli:
+    {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber",
+    }
