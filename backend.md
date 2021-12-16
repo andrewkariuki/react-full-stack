@@ -12,9 +12,9 @@ Create a set of rest apis for a todo list. The following endpoints are required:
 
 ## Additional requirements
 
-`GET /todos` should return all todos.  
-`GET /todos?sort=asc|desc` should return all todos sorted by id in ascending or descending order.  
-`GET /todos?limit=10` should return the first 10 todos.  
+`GET /todos` should return all todos.
+`GET /todos?sort=asc|desc` should return all todos sorted by id in ascending or descending order.
+`GET /todos?limit=10` should return the first 10 todos.
 `GET /todos?limit=10&skip=10` should skip the first ten and return the next 10 todos.
 
 ## Restrictions

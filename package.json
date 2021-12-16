@@ -1,7 +1,35 @@
 {
-  "name": "root",
+  "name": "react-full-stack",
   "private": true,
+  "scripts": {
+    "prepare": "yarn husky install"
+  },
   "devDependencies": {
-    "lerna": "^4.0.0"
-  }
+    "@types/chalk": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "chalk": "^5.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "prettier": "^2.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "./tools/commit/validation.js"
+    }
+  },
+  "type": "module"
 }

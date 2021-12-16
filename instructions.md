@@ -1,4 +1,4 @@
-This test investigates your fullstack skills on react and nodejs
+# This test investigates your fullstack skills on react and nodejs
 
 1. The file `backend.md` contains instructions for the backend task
 2. The file `frontend.md` contains instructions for the frontend task
