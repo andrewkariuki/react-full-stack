@@ -20,4 +20,5 @@ rules:
     comma-dangle: ["error", "only-multiline"],
     no-use-before-define: "off",
     multiline-ternary: ["error", "never"],
+    space-before-function-paren: ["error", "never"],
   }

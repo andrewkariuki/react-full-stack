@@ -5,9 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "lerna exec husky install",
+    "prepare": "husky install",
     "clean": "lerna exec del-cli packages/**/build",
-    "dev:backend": "lerna run develop --scope=@react-full-stack/backend",
+    "dev:backend": "lerna run develop --scope=@react-full-stack/backend --stream",
     "build:backend": "lerna run build --scope=@react-full-stack/backend"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "eslint-plugin-react": "^7.27.1",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
   },
   "config": {
