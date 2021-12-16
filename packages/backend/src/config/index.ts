@@ -1,5 +1,7 @@
+require("dotenv-safe").config();
+
 export const config = {
-  port: 3000,
-  nodeEnv: "development",
+  port: process.env.PORT,
+  nodeEnv: process.env.NODE_ENV,
   dbUrl: "",
 };
