@@ -15,8 +15,8 @@ export const checkAuth = async (req: Request, res: Response, next: NextFunction)
     return;
   }
 
-  const { userId, username } = jwtPayload;
-  const newToken = jwt.sign({ userId, username }, config.jwtSecret as string, {
+  const { userId, email } = jwtPayload;
+  const newToken = jwt.sign({ userId, email }, config.jwtSecret as string, {
     expiresIn: "1h",
   });
 

@@ -16,11 +16,11 @@ export class Todo extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
   @Column("varchar", { length: 255 })
-  name: string;
+  title: string;
 
   @Column("varchar", { length: 255 }) description: string;
 
-  @Column("text", { select: false }) complete: boolean;
+  @Column("text", { default: false }) complete: boolean;
 
   @Column("integer") userId: number;
 
