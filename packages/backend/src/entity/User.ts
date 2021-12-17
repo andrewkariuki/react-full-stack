@@ -1,4 +1,4 @@
-import * as argon2 from "argon2";
+import * as bcrypt from "bcryptjs";
 import {
   BaseEntity,
   BeforeInsert,
@@ -36,10 +36,10 @@ export class User extends BaseEntity {
 
   @BeforeInsert()
   async hashPasswordBeforeInsert() {
-    this.password = await argon2.hash(this.password);
+    this.password = await bcrypt.hash(this.password, 10);
   }
 
   validatePassword(password: string) {
-    return argon2.verify(password, this.password);
+    return bcrypt.compare(password, this.password);
   }
 }

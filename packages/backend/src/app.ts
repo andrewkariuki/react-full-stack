@@ -12,7 +12,7 @@ import * as winston from "winston";
 import { config } from "./config";
 import { connectDB } from "./db";
 import { Redis } from "./redis";
-import { UserRoutes } from "./routes";
+import { UserRoutes, TodoRoutes } from "./routes";
 import { RoutesConfig } from "./shared";
 
 connectDB().then(() => console.log("Database connection established."));
@@ -57,8 +57,8 @@ if (!process.env.DEBUG) {
 
 app.use(expressWinston.logger(loggerOptions));
 
-// routes.push(new IndexRoutes(app));
 routes.push(new UserRoutes(app));
+routes.push(new TodoRoutes(app));
 
 const runningMessage = `Server running at http://localhost:${config.port}`;
 
