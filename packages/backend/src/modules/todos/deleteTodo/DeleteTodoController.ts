@@ -16,7 +16,7 @@ export class DeleteTodoController extends BaseController {
 
       await todoRepository.delete({ id: parseInt(id) });
 
-      return this.ok<any>(res, { success: "Todo delete" });
+      return this.ok<any>(res, { success: "Todo DELETED" });
     } catch (err) {
       return this.fail(res, err.toString());
     }

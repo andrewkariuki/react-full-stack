@@ -21,8 +21,6 @@ export class EditTodoController extends BaseController {
 
       if (typeof updateData.complete === "undefined") delete updateData.complete;
 
-      console.log(updateData);
-
       if (!updateData.title && !updateData.description && !updateData.complete) {
         return this.clientError(res, "Can not update empty parameter.");
       }
@@ -32,14 +30,14 @@ export class EditTodoController extends BaseController {
       const isTodo = !!todo;
       if (!isTodo) return this.clientError(res, "Todo not found");
 
-      const update = await todoRepository.update(
+      await todoRepository.update(
         {
           id: parseInt(id),
         },
         updateData
       );
 
-      return this.ok<any>(res, update);
+      return this.ok<any>(res, { success: "Todo UPDATED" });
     } catch (err) {
       return this.fail(res, err.toString());
     }

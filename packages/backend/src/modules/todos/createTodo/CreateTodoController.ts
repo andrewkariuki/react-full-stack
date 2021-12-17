@@ -13,12 +13,23 @@ export class CreateTodoController extends BaseController {
       const jwtPayload = <any>jwt.verify(token, config.jwtSecret as string);
       const { userId } = jwtPayload;
 
-      const { title, description } = req.body;
+      const inputData = {
+        title: req.body.title,
+        description: req.body.description,
+      };
+
+      if (typeof inputData.title === "undefined") delete inputData.title;
+
+      if (typeof inputData.description === "undefined") delete inputData.description;
+
+      if (!inputData.title && !inputData.description) {
+        return this.clientError(res, "Can not Title and Description are reqired.");
+      }
 
       const todos = await todoRepository.save(
         todoRepository.create({
-          title: title,
-          description: description,
+          title: inputData.title,
+          description: inputData.description,
           userId: userId,
         })
       );
