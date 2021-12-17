@@ -5,4 +5,5 @@ export const config = {
   nodeEnv: process.env.NODE_ENV,
   dbUrl: "",
   redisURL: "",
+  jwtSecret: process.env.JWT_SECRET,
 };
