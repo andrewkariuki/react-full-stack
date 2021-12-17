@@ -10,8 +10,9 @@ import * as RedisRateLimit from "rate-limit-redis";
 import "reflect-metadata";
 import * as winston from "winston";
 import { config } from "./config";
-import { IndexRoutes } from "./routes";
-import { connectDB, Redis } from "./services";
+import { connectDB } from "./db";
+import { Redis } from "./redis";
+import { UserRoutes } from "./routes";
 import { RoutesConfig } from "./shared";
 
 connectDB().then(() => console.log("Database connection established."));
@@ -56,7 +57,8 @@ if (!process.env.DEBUG) {
 
 app.use(expressWinston.logger(loggerOptions));
 
-routes.push(new IndexRoutes(app));
+// routes.push(new IndexRoutes(app));
+routes.push(new UserRoutes(app));
 
 const runningMessage = `Server running at http://localhost:${config.port}`;
 

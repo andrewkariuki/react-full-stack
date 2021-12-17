@@ -1,6 +1,6 @@
-import { config } from "../../config";
+import { config } from "../config";
 import { getConnectionOptions, createConnection } from "typeorm";
-import { User } from "../../entity/User";
+import { User } from "../entity/User";
 
 export const connectDB = async () => {
   const connectionOptions = await getConnectionOptions(config.nodeEnv);
@@ -12,5 +12,5 @@ export const connectDB = async () => {
         entities: [User],
         name: "default",
       } as any)
-    : createConnection({ ...connectionOptions, name: "default" });
+    : createConnection({ ...connectionOptions, name: "default" } as any);
 };
