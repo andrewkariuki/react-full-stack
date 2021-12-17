@@ -1,7 +1,15 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
-  return <div>Welcome, Home</div>;
+class App extends React.Component {
+  render() {
+    const navigation = (
+      <Routes>
+        <Route path="/" />
+      </Routes>
+    );
+    return <>{navigation}</>;
+  }
 }
 
 export default App;
