@@ -13,7 +13,7 @@ import { User } from "./User";
 
 @Entity("todos")
 export class Todo extends BaseEntity {
-  @PrimaryGeneratedColumn("uuid") id: string;
+  @PrimaryGeneratedColumn() id: number;
 
   @Column("varchar", { length: 255 })
   name: string;
@@ -22,7 +22,7 @@ export class Todo extends BaseEntity {
 
   @Column("text", { select: false }) complete: boolean;
 
-  @Column("uuid") userId: string;
+  @Column("integer") userId: number;
 
   @ManyToOne(() => User, (user) => user.todos)
   user: User;

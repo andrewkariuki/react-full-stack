@@ -15,7 +15,7 @@ import { Todo } from "./Todo";
 
 @Entity("users")
 export class User extends BaseEntity {
-  @PrimaryGeneratedColumn("uuid") id: string;
+  @PrimaryGeneratedColumn() id: number;
 
   @Column("varchar", { length: 255 })
   name: string;
