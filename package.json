@@ -8,6 +8,7 @@
     "prepare": "husky install",
     "clean": "lerna exec del-cli packages/**/build",
     "dev:backend": "lerna run develop --scope=@react-full-stack/backend --stream",
+    "start:frontend": "lerna run start --scope=@react-full-stack/frontend --stream",
     "build:backend": "lerna run build --scope=@react-full-stack/backend"
   },
   "devDependencies": {
