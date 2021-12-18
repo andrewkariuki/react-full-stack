@@ -4,6 +4,7 @@ export const FilterEl = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const FilterHeadingEl = styled.div``;
