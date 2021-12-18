@@ -10,6 +10,10 @@ export const PatientSummaryCardEl = styled.div`
   justify-content: space-between;
   position: relative;
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
   &.active {
     background-color: #fff !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
@@ -52,6 +56,9 @@ export const PatientsSummaryInfo = styled.div`
 export const PatientsVitalsSummaryEl = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 500px) {
+    margin-top: 20px;
+  }
 `;
 
 export const PatientStatusBubbleEl = styled.div`

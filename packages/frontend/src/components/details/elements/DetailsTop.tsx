@@ -7,6 +7,10 @@ export const DetailsTopEl = styled.section`
   justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 1px solid ${COLORS.mainBgColor};
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 export const PatientInfoEL = styled.div`
@@ -50,7 +54,12 @@ export const PatientInfoProfileEL = styled.div`
   }
 `;
 
-export const DoctorActionAreaEL = styled.div``;
+export const DoctorActionAreaEL = styled.div`
+  @media (max-width: 500px) {
+    margin-top: 20px;
+    text-align: center;
+  }
+`;
 
 export const DoctorActionAreaButtons = styled.div`
   display: flex;
@@ -84,4 +93,7 @@ export const DoctorActionAreaFooter = styled.div`
   text-align: right;
   font-size: 0.7rem;
   color: ${COLORS.textPrimary};
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `;
