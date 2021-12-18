@@ -9,6 +9,13 @@ export const PatientSummaryCardEl = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  &.active {
+    background-color: #fff !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    border: 0;
+  }
+
   &:hover {
     background-color: #fff !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;

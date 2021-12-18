@@ -9,6 +9,9 @@ class App extends React.Component {
     const navigation = (
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Home />} />
+        <Route path="/settings" element={<Home />} />
+        <Route path="/shop" element={<Home />} />
         <Route path="/patients" element={<Patients />} />
       </Routes>
     );

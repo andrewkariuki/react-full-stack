@@ -11,13 +11,20 @@ import { PatientVitals } from "./PatientVitals";
 
 interface PatientSummaryCardProps {
   heartColor?: string;
-  bubbleColor?: string;
+  weightColor?: string;
+  pulseColor?: string;
   dropColor?: string;
+  bubbleColor?: string;
+  isActive?: boolean;
 }
 
-export const PatientSummaryCard: React.FC<PatientSummaryCardProps> = ({ bubbleColor }) => {
+export const PatientSummaryCard: React.FC<PatientSummaryCardProps> = ({
+  bubbleColor,
+  isActive,
+  ...rest
+}) => {
   return (
-    <PatientSummaryCardEl>
+    <PatientSummaryCardEl className={`${isActive ? "active" : null}`}>
       <PatientsInfoEL>
         <PatientStatusBubbleEl>
           <span style={{ backgroundColor: `${bubbleColor || null}` }} className="bubble"></span>
@@ -25,7 +32,7 @@ export const PatientSummaryCard: React.FC<PatientSummaryCardProps> = ({ bubbleCo
         <PatientDetails />
       </PatientsInfoEL>
       <PatientsVitalsSummaryEl>
-        <PatientVitals />
+        <PatientVitals {...rest} />
         <PatientsSummaryActions />
       </PatientsVitalsSummaryEl>
     </PatientSummaryCardEl>
