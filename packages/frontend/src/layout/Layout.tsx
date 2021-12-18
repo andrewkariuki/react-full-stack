@@ -1,6 +1,6 @@
 import React from "react";
-import { Header } from "../components";
-import { Main } from "./elements";
+import { Header, SideNav } from "../components";
+import { Main, MainContent, MainNav } from "./elements";
 
 interface LayoutProps {}
 
@@ -8,7 +8,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <Main>{children}</Main>
+      <Main>
+        <MainNav>
+          <SideNav />
+        </MainNav>
+        <MainContent>{children}</MainContent>
+      </Main>
     </>
   );
 };
