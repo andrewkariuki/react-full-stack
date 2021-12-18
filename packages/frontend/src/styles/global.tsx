@@ -35,6 +35,10 @@ export const globalStyles = (
       .row {
         margin: 0;
       }
+      .row > * {
+        margin: 0;
+        padding: 0;
+      }
       .container,
       .container-fluid {
         padding: 0;
