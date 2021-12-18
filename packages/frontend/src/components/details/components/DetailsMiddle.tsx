@@ -18,7 +18,7 @@ export const DetailsMiddle: React.FC<DetailsMiddleProps> = () => {
   return (
     <DetailsMiddleEl>
       <Row>
-        <Col md={6}>
+        <Col md={6} sm={6} xs={6}>
           <Diagnostic
             icon={faHeart}
             unitColor={COLORS.green}
@@ -28,7 +28,7 @@ export const DetailsMiddle: React.FC<DetailsMiddleProps> = () => {
             hours="5 hours ago"
           />
         </Col>
-        <Col md={6}>
+        <Col md={6} sm={6} xs={6}>
           <Diagnostic
             icon={faWaveSquare}
             unitColor={COLORS.danger}
@@ -37,10 +37,10 @@ export const DetailsMiddle: React.FC<DetailsMiddleProps> = () => {
             chevronIcon={faChevronDown}
           />
         </Col>
-        <Col md={6}>
+        <Col md={6} sm={6} xs={6}>
           <Diagnostic icon={faWeight} />
         </Col>
-        <Col md={6}>
+        <Col md={6} sm={6} xs={6}>
           <Diagnostic icon={faTint} />
         </Col>
       </Row>

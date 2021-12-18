@@ -12,12 +12,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Main>
         <Container fluid>
           <Row>
-            <Col sm={3} md={2}>
+            <Col sm={12} md={2}>
               <MainNav>
                 <SideNav />
               </MainNav>
             </Col>
-            <Col sm={9} md={10}>
+            <Col sm={12} md={10}>
               <MainContent>
                 <Container fluid>
                   <Row>{children}</Row>

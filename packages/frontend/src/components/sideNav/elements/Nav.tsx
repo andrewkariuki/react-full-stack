@@ -6,6 +6,12 @@ export const NavItems = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (max-width: 576px) {
+    display: flex;
+    margin-bottom: 10px;
+    overflow: scroll;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -25,6 +31,10 @@ export const NavLinkEl = styled(NavLink)`
     background-color: ${COLORS.primaryColor};
     color: ${COLORS.white};
     border-radius: 0px 4px 4px 0px;
+
+    @media (max-width: 576px) {
+      border-radius: 4px;
+    }
 
     & .bubble {
       display: block;
