@@ -18,8 +18,8 @@ export const PatientInfoPictureEL = styled.div`
   & .bubble {
     height: 10px;
     width: 10px;
-    left: 45px;
-    top: 45px;
+    left: 31px;
+    top: 28px;
   }
 `;
 
@@ -35,17 +35,18 @@ export const PatientInfoProfileEL = styled.div`
   }
   & .logs {
     color: ${COLORS.primaryColor};
+    font-size: 0.85rem;
     font-weight: 500;
   }
 
   & .name {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: ${COLORS.primaryColor};
   }
   & .age {
     color: ${COLORS.textPrimary};
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 `;
 
@@ -59,16 +60,17 @@ export const DoctorActionAreaButtons = styled.div`
 `;
 
 export const DoctorActionAreaButton = styled.a`
-  padding: 8px;
+  padding: 3px;
   border-radius: 4px;
   color: ${COLORS.textSecondary};
   margin-right: 8px;
   border: 1px solid ${COLORS.textSecondary};
   display: flex;
   align-items: center;
+  font-size: 0.75rem;
 
   &.round {
-    padding: 10px;
+    padding: 7px;
     border-radius: 50%;
     background-color: ${COLORS.textSecondary};
     color: ${COLORS.primaryColor};
@@ -80,6 +82,6 @@ export const DoctorActionAreaButton = styled.a`
 
 export const DoctorActionAreaFooter = styled.div`
   text-align: right;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: ${COLORS.textPrimary};
 `;

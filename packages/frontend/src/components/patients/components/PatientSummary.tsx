@@ -9,14 +9,18 @@ import { PatientDetails } from "./PatientDetails";
 import { PatientsSummaryActions } from "./PatientsSummaryActions";
 import { PatientVitals } from "./PatientVitals";
 
-interface PatientSummaryCardProps {}
+interface PatientSummaryCardProps {
+  heartColor?: string;
+  bubbleColor?: string;
+  dropColor?: string;
+}
 
-export const PatientSummaryCard: React.FC<PatientSummaryCardProps> = () => {
+export const PatientSummaryCard: React.FC<PatientSummaryCardProps> = ({ bubbleColor }) => {
   return (
     <PatientSummaryCardEl>
       <PatientsInfoEL>
         <PatientStatusBubbleEl>
-          <span className="bubble"></span>
+          <span style={{ backgroundColor: `${bubbleColor || null}` }} className="bubble"></span>
         </PatientStatusBubbleEl>
         <PatientDetails />
       </PatientsInfoEL>

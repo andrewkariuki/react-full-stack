@@ -9,7 +9,10 @@ export const FilterEl = styled.section`
 
 export const FilterHeadingEl = styled.div``;
 
-export const FilterHeadingText = styled.h3``;
+export const FilterHeadingText = styled.span`
+  font-size: 1.1rem;
+  font-weight: 500;
+`;
 
 export const FilterButtonSetEl = styled.div`
   display: flex;

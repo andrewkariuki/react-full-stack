@@ -31,6 +31,19 @@ export const globalStyles = (
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
+
+      .row {
+        margin: 0;
+      }
+      .container,
+      .container-fluid {
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     `}
   />
 );

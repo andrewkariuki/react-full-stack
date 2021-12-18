@@ -8,7 +8,7 @@ export const PatientInfo: React.FC<PatientInfoProps> = () => {
   return (
     <PatientInfoEL>
       <PatientInfoPictureEL>
-        <UserPicture width="60px" withBubble />
+        <UserPicture width="40px" withBubble />
       </PatientInfoPictureEL>
       <PatientInfoProfileEL>
         <span className="time-sheet">

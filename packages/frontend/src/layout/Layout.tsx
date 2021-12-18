@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import { Header, SideNav } from "../components";
 import { Main, MainContent, MainNav } from "./elements";
 
@@ -9,10 +10,22 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     <>
       <Header />
       <Main>
-        <MainNav>
-          <SideNav />
-        </MainNav>
-        <MainContent>{children}</MainContent>
+        <Container fluid>
+          <Row>
+            <Col sm={3} md={2}>
+              <MainNav>
+                <SideNav />
+              </MainNav>
+            </Col>
+            <Col sm={9} md={10}>
+              <MainContent>
+                <Container fluid>
+                  <Row>{children}</Row>
+                </Container>
+              </MainContent>
+            </Col>
+          </Row>
+        </Container>
       </Main>
     </>
   );
