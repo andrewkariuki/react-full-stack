@@ -1,5 +1,5 @@
 import React from "react";
-import { Filter, PatientsList, PatientSummaryCard } from "../components";
+import { Filter, PatientsFullDetails, PatientsList, PatientSummaryCard } from "../components";
 import { Layout } from "../layout";
 
 interface PatientsProps {}
@@ -12,6 +12,7 @@ export const Patients: React.FC<PatientsProps> = () => {
         <PatientSummaryCard />
         <PatientSummaryCard />
       </PatientsList>
+      <PatientsFullDetails></PatientsFullDetails>
     </Layout>
   );
 };
