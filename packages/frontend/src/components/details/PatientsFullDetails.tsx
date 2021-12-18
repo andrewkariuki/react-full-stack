@@ -9,8 +9,8 @@ export const PatientsFullDetails: React.FC<PatientsFullDetailsProps> = () => {
     <FullDetailsEl>
       <DetailsTop />
       <DetailsMiddle />
-      <DetailsChart />
-      <DetailsChart />
+      <DetailsChart label="History Blood Pressure" />
+      <DetailsChart label="History Heart Beat" />
     </FullDetailsEl>
   );
 };
