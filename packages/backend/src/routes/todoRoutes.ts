@@ -1,5 +1,4 @@
 import { Application, Request, Response } from "express";
-import { checkAuth } from "../middleware";
 import {
   createTodoController,
   deleteTodoController,
@@ -17,14 +16,14 @@ export class TodoRoutes extends RoutesConfig {
   configureRoutes() {
     this.app
       .route("/todos")
-      .get([checkAuth], (req: Request, res: Response) => getAllTodosController.execute(req, res))
-      .post([checkAuth], (req: Request, res: Response) => createTodoController.execute(req, res));
+      .get((req: Request, res: Response) => getAllTodosController.execute(req, res))
+      .post((req: Request, res: Response) => createTodoController.execute(req, res));
 
     this.app
       .route("/todos/:id")
-      .get([checkAuth], (req: Request, res: Response) => getTodoByIdController.execute(req, res))
-      .put([checkAuth], (req: Request, res: Response) => editTodoController.execute(req, res))
-      .delete([checkAuth], (req: Request, res: Response) => deleteTodoController.execute(req, res));
+      .get((req: Request, res: Response) => getTodoByIdController.execute(req, res))
+      .put((req: Request, res: Response) => editTodoController.execute(req, res))
+      .delete((req: Request, res: Response) => deleteTodoController.execute(req, res));
 
     return this.app;
   }

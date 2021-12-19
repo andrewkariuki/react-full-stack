@@ -1,18 +1,13 @@
-import { Todo } from "../../../entity/Todo";
-import { BaseController } from "../../../controllers";
-import { getRepository } from "typeorm";
-import * as jwt from "jsonwebtoken";
 import { Request, Response } from "express";
-import { config } from "../../../config";
+import { getRepository } from "typeorm";
+import { BaseController } from "../../../controllers";
+import { Todo } from "../../../entity/Todo";
 
 export class CreateTodoController extends BaseController {
   protected async executeImpl(req: Request, res: Response): Promise<void | any> {
     const todoRepository = getRepository(Todo);
-    try {
-      const token = <string>req.headers.auth;
-      const jwtPayload = <any>jwt.verify(token, config.jwtSecret as string);
-      const { userId } = jwtPayload;
 
+    try {
       const inputData = {
         title: req.body.title,
         description: req.body.description,
@@ -30,7 +25,6 @@ export class CreateTodoController extends BaseController {
         todoRepository.create({
           title: inputData.title,
           description: inputData.description,
-          userId: userId,
         })
       );
 

@@ -4,12 +4,10 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
-  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   VersionColumn,
 } from "typeorm";
-import { User } from "./User";
 
 @Entity("todos")
 export class Todo extends BaseEntity {
@@ -21,11 +19,6 @@ export class Todo extends BaseEntity {
   @Column("varchar", { length: 255 }) description: string;
 
   @Column("text", { default: false }) complete: boolean;
-
-  @Column("integer") userId: number;
-
-  @ManyToOne(() => User, (user) => user.todos)
-  user: User;
 
   @CreateDateColumn() createdDate: Date;
 

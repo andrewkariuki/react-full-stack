@@ -7,9 +7,10 @@
   "scripts": {
     "prepare": "husky install",
     "clean": "lerna exec del-cli packages/**/build",
-    "dev:backend": "lerna run develop --scope=@react-full-stack/backend --stream",
+    "start:backend": "lerna run develop --scope=@react-full-stack/backend --stream",
     "start:frontend": "lerna run start --scope=@react-full-stack/frontend --stream",
-    "build:backend": "lerna run build --scope=@react-full-stack/backend"
+    "build:backend": "lerna run build --scope=@react-full-stack/backend",
+    "migrate:db": "lerna run migrate --scope=@react-full-stack/backend --stream"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",

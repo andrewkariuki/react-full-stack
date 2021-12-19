@@ -1,9 +1,7 @@
 require("dotenv-safe").config();
 
 export const config = {
-  port: process.env.PORT,
-  nodeEnv: process.env.NODE_ENV,
+  port: process.env.PORT || 4000,
+  nodeEnv: process.env.NODE_ENV || "development",
   dbUrl: "",
-  redisURL: "",
-  jwtSecret: process.env.JWT_SECRET,
 };
